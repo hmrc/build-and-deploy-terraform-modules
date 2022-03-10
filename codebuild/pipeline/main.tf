@@ -29,7 +29,7 @@ resource "aws_codebuild_project" "codebuild_pipeline" {
   vpc_config {
     vpc_id = var.codebuild_vpc_id
 
-    subnets = [var.codebuild_subnet_ids]
+    subnets = var.codebuild_subnet_ids
 
     security_group_ids = var.codebuild_security_group_id
   }
