@@ -56,7 +56,7 @@ variable "codebuild_vpc_id" {
 }
 
 variable "codebuild_security_group_id" {
-  type = string
+  type = list(any)
 }
 
 variable "github-ro-token" {

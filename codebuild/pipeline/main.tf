@@ -31,7 +31,7 @@ resource "aws_codebuild_project" "codebuild_pipeline" {
 
     subnets = var.codebuild_subnet_ids
 
-    security_group_ids = var.codebuild_security_group_id
+    security_group_ids = [var.codebuild_security_group_id]
   }
 
   tags = {
