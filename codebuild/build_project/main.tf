@@ -1,5 +1,5 @@
-resource "aws_codebuild_project" "codebuild_pipeline" {
-  name          = var.codebuild_pipeline_name
+resource "aws_codebuild_project" "codebuild_build_project" {
+  name          = var.codebuild_build_project_name
   service_role  = aws_iam_role.codebuild_execution_role.arn
   build_timeout = "60"
 
@@ -37,7 +37,7 @@ resource "aws_codebuild_project" "codebuild_pipeline" {
   }
 }
 
-resource "aws_codebuild_source_credential" "hmrc_github" {
+resource "aws_codebuild_source_credential" "codebuild_github_credential" {
   auth_type   = "PERSONAL_ACCESS_TOKEN"
   server_type = "GITHUB"
   token       = data.aws_ssm_parameter.github-ro-token.value

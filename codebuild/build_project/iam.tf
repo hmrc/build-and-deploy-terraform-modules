@@ -1,5 +1,5 @@
 resource "aws_iam_role" "codebuild_execution_role" {
-  name = var.codebuild_pipeline_name
+  name = var.codebuild_build_project_name
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -17,7 +17,7 @@ EOF
 }
 
 resource "aws_iam_role_policy" "codebuild_execution_policy" {
-  name   = var.codebuild_pipeline_name
+  name   = var.codebuild_build_project_name
   role   = aws_iam_role.codebuild_execution_role.id
   policy = data.aws_iam_policy_document.codebuild_execution_policy_document.json
 }

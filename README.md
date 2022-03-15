@@ -1,7 +1,8 @@
 
 # build-and-deploy-terraform-modules
 
-This is a placeholder README.md for a new repository
+This repository contains terraform modules used by the Build and Deploy team.   
+It is a public repository and as such should contain nothing sensitive. Specific configuration should be contained within the terraform code calling the modules.
 
 ### License
 
