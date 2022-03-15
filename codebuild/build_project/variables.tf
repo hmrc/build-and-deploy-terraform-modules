@@ -1,11 +1,11 @@
-variable "codebuild_pipeline_name" {
+variable "codebuild_build_project_name" {
     type = string
-    description = "Codebuild pipeline name"
+    description = "Codebuild build project name"
 }
 
 variable "codebuild_source_location" {
     type = string
-    description = "URI for the source repo the codebuild pipeline uses"
+    description = "URI for the source repo the codebuild project uses"
 }
 
 variable "codebuild_github_source_branch" {
