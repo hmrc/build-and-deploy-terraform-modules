@@ -42,9 +42,9 @@ variable "codebuild_container_type" {
 }
 
 variable "codebuild_image_pull_credentials_type" {
-    type = string
-    description = "Codebuild Image Pull Credentials Type"
-    default = "CODEBUILD"
+  type = string
+  description = "Codebuild Image Pull Credentials Type"
+  default = "CODEBUILD"
 }
 
 variable "codebuild_subnet_ids" {

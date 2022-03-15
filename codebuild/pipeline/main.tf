@@ -1,6 +1,6 @@
 resource "aws_codebuild_project" "codebuild_pipeline" {
   name          = var.codebuild_pipeline_name
-  service_role  = aws_iam_role.codebuild_execution.arn
+  service_role  = aws_iam_role.codebuild_execution_role.arn
   build_timeout = "60"
 
   artifacts {
@@ -28,9 +28,7 @@ resource "aws_codebuild_project" "codebuild_pipeline" {
   
   vpc_config {
     vpc_id = var.codebuild_vpc_id
-
     subnets = var.codebuild_subnet_ids
-
     security_group_ids = [var.codebuild_security_group_id]
   }
 
